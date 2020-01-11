@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "node lbrary.js" ,
-    "devStart": "nodemon lbrary.js",
+    "devStart": "nodemon lbrary.js"
   },
   "author": "",
   "license": "ISC"
