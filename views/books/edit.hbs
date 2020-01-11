@@ -1,16 +1,14 @@
-<div class="container">
-    <div class="row">
-        <div class="col s6">
-            <h2 >Edit Book</h2>
-            <form action='/books/{{books.id}}?_method=PUT' method="POST" enctype="multipart/form-data">
-                {{> forminput_book}}
-                <a href="/books" class="waves-effect waves-light btn black"><i
-                        class="material-icons left">cancel</i>Cancel</a>
-                <button class="btn waves-effect waves-light black" type="submit" name="action">Update
-                    <i class="material-icons left">update</i>
-                </button>
+<div class="row">
+    <div class="col s12 m8 l6  offset-m1 offset-l1">
+        <h2>Edit Book</h2>
+        <form action='/books/{{books.id}}?_method=PUT' method="POST" enctype="multipart/form-data">
+            {{> forminput_book}}
+            <a href="/books" class="waves-effect waves-light btn black"><i
+                    class="material-icons left">cancel</i>Cancel</a>
+            <button class="btn waves-effect waves-light black" type="submit" name="action">Update
+                <i class="material-icons left">update</i>
+            </button>
 
-            </form>
-        </div>
+        </form>
     </div>
 </div>
