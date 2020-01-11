@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "lbrary.js",
-  "scripts": {
-    "start": "node lbrary.js" 
-  },
   "dependencies": {
     "cloudinary": "^1.18.1",
     "dotenv": "^8.2.0",
@@ -17,6 +14,10 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "start": "node lbrary.js" ,
+    "devStart": "nodemon lbrary.js",
   },
   "author": "",
   "license": "ISC"
