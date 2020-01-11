@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
 const methodoverride = require('method-override')
 const cloudinary = require('cloudinary').v2
-const port = process.env.port || 8888;
+const PORT = process.env.PORT || 8888;
 const libraryRoute = require("./routes/index");
 const authorsRoute = require('./routes/author');
 const booksRoute = require('./routes/book');
@@ -54,5 +54,5 @@ app.use('/', libraryRoute);
 app.use('/authors', authorsRoute);
 app.use('/books', booksRoute)
 
-app.listen(port, () => console.log(`Connected to the port ${port} and running`))
+app.listen(PORT, () => console.log(`Connected to the port ${PORT} and running`))
 
