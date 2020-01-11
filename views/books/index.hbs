@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+
+        <h2>Search Books</h2>
+        <form action="/books" method="GET">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="title" name="title" value='{{searchOptions.title}}' type="text"
+                        class="validate">
+                    <label for="title">Title</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s3">
+                    <input name="publishedAfter" value='{{searchOptions.publishedAfter}}' type="date" class="validate">
+                    <label for="publishedAfter">Published After</label>
+                </div>
+                <div class="input-field col s3">
+                    <input name="publishedBefore" value='{{searchOptions.publishedBefore}}' type="date"
+                        class="validate">
+                    <label for="publishedBefore">Published Before</label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <button class="btn waves-effect waves-light black" type="submit" name="action">Search
+                        <i class="material-icons right">search</i>
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+<div class="row">
+    {{#each books}}
+    <div class="col s2">
+        <a href="/books/{{this.id}}">
+        <img class="responsive-img" height="300"  src="{{this.coverImageName}}">
+        </a>
+
+    </div>
+    {{/each}}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

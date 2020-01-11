@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="input-field col s12">
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Title" name="title" type="text" value='{{books.title}}' class="validate">
+                <label for="name">Title</label>
+
+            </div>
+            <div class="input-field col s6">
+                <select name="author">
+                    {{#each authors}}
+                    {{#ifeq authors.id book.author}}
+                     {{authors.id}} is equal to {{book.author}}
+                     <option  selected value="{{this.id}}">{{this.name}}</option>
+                    {{else}}
+                    {{authors.id}} is not equal to {{book.author}}
+                    <option value="{{this.id}}">{{this.name}}</option>
+                    {{/ifeq}}
+                    {{/each}}
+                </select>
+                <label for="author">Author</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="input-field col s12">
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="date" name="publishDate" class="validate" value="{{books.publishDate}}">
+                <label for="publishDate">Publish Date</label>
+            </div>
+            <div class="input-field col s6">
+                <input type="number" name="pageCount" min="1" class="validate" value="{{books.pageCount}}">
+                <label for="pageCount">Page Count</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="input-field col s12">
+
+        <div class="row">
+
+            <div class="file-field input-field col s6">
+                <div class="btn black">
+                    <span>Cover</span>
+                    <input type="file" name="cover" value="{{books.coverImageName}}">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" name="cover" type="text">
+                </div>
+            </div>
+
+            <div class="input-field col s6">
+                <textarea placeholder="Write description here...." class="materialize-textarea" name="description"
+                    class="validate">{{books.description}}</textarea>
+                <label for="description">Description</label>
+            </div>
+        </div>
+    </div>
+</div>

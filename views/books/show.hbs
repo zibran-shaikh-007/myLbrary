@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col s6 offset-s1">
+        <h2>{{books.title}}</h2>
+        
+        
+  
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="{{books.coverImageName}}">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h5> Author : {{books.author}}</h5>
+          <h5> Publish Date : {{books.publishDate}}</h5>
+          <h5> Page Count : {{books.pageCount}}</h5>
+          <h5> Description : {{books.description}}</h5>
+           <div class="col s3">
+                <a href="/authors/{{books.author}}" class="btn waves-effect waves-light black"><i class="material-icons left">view_quilt</i>View Author<a>
+                
+            </div>
+            <div class="col s3">
+                <a href="/books/{{books.id}}/edit" class="btn waves-effect waves-light black"><i class="material-icons left">edit</i>Edit<a></a>
+            </div>
+            <div class="col s6">
+                <form method='POST' action="/books/{{books.id}}?_method=DELETE">
+                    <button type="submit" class="btn waves-effect waves-light black"><i class="material-icons left">delete</i>Delete</button>
+                </form>
+            </div>
+
+        </div>
+        
+      </div>
+    
+
+        
+        
+    </div>
+</div>

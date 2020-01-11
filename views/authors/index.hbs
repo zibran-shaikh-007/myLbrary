@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+
+        <h2>Search Authors</h2>
+        <form action="/authors" method="GET">
+
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Enter Name" value='{{searchOptions.name}}' name="name" type="text"
+                        class="validate">
+                    <label for="name">Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <button class="btn waves-effect waves-light black" type="submit" name="action">Search
+                        <i class="material-icons right">search</i>
+                    </button>
+                </div>
+            </div>
+
+        </form>
+        <table class="table-responsive col s6">
+            <thead>
+                <tr>
+                    <th>List of Authors</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each authors}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td><a href="/authors/{{this.id}}" class="btn waves-effect waves-light black"><i class="material-icons left">view_quilt</i>View</a></td>
+                    <td><a href="/authors/{{this.id}}/edit" class="btn waves-effect waves-light black"><i class="material-icons left">edit</i>Edit</a></td>
+                    <td><form method='POST' action="/authors/{{this.id}}?_method=DELETE">
+                        <button type="submit" class="btn waves-effect waves-light black"><i class="material-icons left">delete</i>Delete</button>
+                    </form></td>
+                </tr>
+                {{/each}} 
+            </tbody>
+        </table>
+
+    </div>
+</div>

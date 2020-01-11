@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col s6">
+            <h2 >New Author</h2>
+            <form action='/authors' method="POST">
+                {{> forminput}}
+                <a href="/authors" class="waves-effect waves-light btn black"><i
+                        class="material-icons left">cancel</i>Cancel</a>
+                <button class="btn waves-effect waves-light black" type="submit" name="action">Create
+                    <i class="material-icons left">create</i>
+                </button>
+
+            </form>
+        </div>
+    </div>
+</div>
