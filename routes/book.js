@@ -62,7 +62,7 @@ router.post('/', upload.single('cover'), async (req, res) => {
     })
     //console.log(result.secure_url)
     const book = new Books();
-    book.title = req.body.title,
+        book.title = req.body.title,
         book.author = req.body.author,
         book.publishDate = new Date(req.body.publishDate),
         book.pageCount = req.body.pageCount,
@@ -71,7 +71,7 @@ router.post('/', upload.single('cover'), async (req, res) => {
 
     try {
 
-        const newBook = await book.save();
+        await book.save();
         //console.log(newBook)
 
         res.redirect(`books`)
