@@ -77,8 +77,8 @@ router.post('/', upload.single('cover'), async (req, res) => {
         res.redirect(`books`)
 
 
-    } catch  {
-        
+    } catch(e)  {
+        console.log("error", e)
         renderNewPage(res, book, true)
 
         // if (books.coverImageName != null) {

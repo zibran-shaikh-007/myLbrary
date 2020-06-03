@@ -16,7 +16,7 @@
     "nodemon": "^2.0.2"
   },
   "scripts": {
-    "start": "node lbrary.js" ,
+    "start": "node lbrary.js",
     "devStart": "nodemon lbrary.js"
   },
   "author": "",
